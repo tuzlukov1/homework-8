@@ -39,13 +39,14 @@ public class Main {
     }
 
     public static void recognizeIsSymbolsDoubled(String symbols) {
-        for (int i = 0; i < symbols.length(); i++) {
-            if ((symbols.charAt(i) == symbols.charAt(i + 1)) && (i != symbols.length())) {
+        for (int i = 0; i < symbols.length() - 2; i++) {
+            if ((symbols.charAt(i) == symbols.charAt(i + 1))) {
                 System.out.println("Символ на позиции - " + i + ":'" + symbols.charAt(i) + "' повторяется.");
                 break;
             }
         }
     }
+
 
     public static void reverseArray(int[] array) {
         for (int i = 0; i < array.length / 2; i++) {
